@@ -10,6 +10,7 @@ const app = express();
 
 dotenv.config();
 
+//Connect to MongoDB Cloud
 mongoose.connect(
   process.env.DATABASE,
   { useNewUrlParser: true, useUnifiedTopology: true },
