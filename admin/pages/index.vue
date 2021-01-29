@@ -36,7 +36,7 @@
             <!-- Product title -->
             <div class="a-spacing-top-base asin-title">
               <span class="a-text-normal">
-                <div class="p13n-sc-truncated">{{product.title}}</div>
+                <div>{{product.title}}</div>
               </span>
             </div>
             <!-- Product rating -->
@@ -49,14 +49,14 @@
                 <i class="fas fa-star"></i>
               </a>
               <span class="a-letter-space"></span>
-              <span class="a-color-tertiary a-size-small asin-reviews"
+              <span class="a-color-tertiary a-size-small"
                 >(1732)</span
               >
             </div>
             <!-- Product price -->
             <div class="a-row">
               <span class="a-size-base a-color-price">
-                <span class="p13n-sc-price">${{product.price}}</span>
+                <span>${{product.price}}</span>
               </span>
             </div>
             <!-- Product Buttons -->
