@@ -11,6 +11,9 @@
               </nuxt-link>
             </div>
           </div>
+          <div class="col-sm-6">
+            <Search />
+          </div>
           <div class="col-sm-4"></div>
         </div>
 
@@ -121,5 +124,10 @@
 </template>
 
 <script>
-export default {};
+import Search from "~/components/Search";
+export default {
+  components: {
+    Search
+  }
+};
 </script>
