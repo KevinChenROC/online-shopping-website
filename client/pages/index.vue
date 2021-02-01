@@ -122,44 +122,6 @@
                             </span>
                           </div>
                           <!-- Ratings --->
-                          <div class="col-sm-5">
-                            <div class="a-row a-spacing-mini">
-                              <!-- Star Ratings --->
-                              <no-ssr>
-                                <star-rating
-                                  :rating="product.averageRating"
-                                  :show-rating="false"
-                                  :glow="1"
-                                  :border-width="1"
-                                  :rounded-corners="true"
-                                  :read-only="true"
-                                  :star-size="18"
-                                  :star-points="[
-                                    23,
-                                    2,
-                                    14,
-                                    17,
-                                    0,
-                                    19,
-                                    10,
-                                    34,
-                                    7,
-                                    50,
-                                    23,
-                                    43,
-                                    38,
-                                    50,
-                                    36,
-                                    34,
-                                    46,
-                                    19,
-                                    31,
-                                    17
-                                  ]"
-                                ></star-rating>
-                              </no-ssr>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>

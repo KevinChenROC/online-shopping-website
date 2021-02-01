@@ -16,15 +16,15 @@
       <div class="row">
         <div class="col-sm-5 text-center">
           <div class="bx-root-image">
-            <img src="/img/featuredProduct.jpeg" class="img-fluid" />
+            <img src="/img/featuredProduct.jpg" class="img-fluid" />
           </div>
         </div>
         <div class="col-sm-7 m-auto">
           <div class="bx-root-dtls">
-            <div class="bx-root-heading">Introduction to Algorithms</div>
+            <div class="bx-root-heading">Modern Quantum Mechanics</div>
           </div>
           <div class="bx-root-subtext">
-            Canonical books for all programmers
+            A rigorous introduction to quantum mechanics
           </div>
           <div class="bx-root-link">
             <span>Order Now</span>
