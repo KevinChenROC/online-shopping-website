@@ -87,6 +87,7 @@ export default {
       this.selectedFile = event.target.files[0];
       this.fileName = event.target.files[0].name;
     },
+
     async onAddOwner() {
       try {
         let data = new FormData();
@@ -99,7 +100,7 @@ export default {
         );
 
         console.log(data);
-        // this.owners.push(data);
+        this.owners.push(data);
       } catch (err) {
         console.log(err);
       }

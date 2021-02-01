@@ -4,16 +4,12 @@ const Product = require("../models/product");
 const upload = require("../middlewares/upload-photo");
 
 //POST - create a new product
-//   title: String,
-//   description: String,
-//   photo: String,
-//   stockQuantity: Number
-
 router.post("/products", upload.single("photo"), async (req, res) => {
   try {
+    console.log(req.body);
     let product = new Product();
-    product.ownerID = req.body.ownerID;
-    product.categoryID = req.body.categoryID;
+    product.owner = req.body.ownerID;
+    product.category = req.body.categoryID;
     product.title = req.body.title;
     product.description = req.body.description;
     product.price = req.body.price;
