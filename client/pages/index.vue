@@ -40,10 +40,7 @@
                       <div class="col-sm-9">
                         <!-- Title and Date -->
                         <div class="a-row a-spacing-small">
-                          <nuxt-link
-                            :to="`/products/${product._id}`"
-                            class="a-link-normal"
-                          >
+                          <a href="#" class="a-link-normal">
                             <h2 class="a-size-medium">
                               {{ product.title }}
                               <span class="a-letter-space"></span>
@@ -52,7 +49,7 @@
                                 >Sep 3, 2019</span
                               >
                             </h2>
-                          </nuxt-link>
+                          </a>
                         </div>
 
                         <!-- Author's name -->
