@@ -11,10 +11,11 @@
 ## Browser side
 
 1. Vue.js, a component-based framework
-2. Nuxt.js, a framework based on Vue.js for server side rendering, automatic routing, hot-re-
+2. Vuex, a library to manaage the global state for vue components
+3. Nuxt.js, a framework based on Vue.js for server side rendering, automatic routing, hot-re-
    loading.
-3. Axios, a library to handle promised-baed HTTP requests and responses
-4. @nuxtjs/auth, a nuxt module to simply jwt-token management in the browser
+4. Axios, a library to handle promised-baed HTTP requests and responses
+5. @nuxtjs/auth, a nuxt module to simply jwt-token management in the browser
 
 ## Server side
 
