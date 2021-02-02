@@ -44,7 +44,9 @@
             <div class="a-spacing-top-large">
               <span class="a-button-register">
                 <span class="a-button-inner">
-                  <span class="a-button-text">Update Profile</span>
+                  <span class="a-button-text" @click="onUpdateProfile"
+                    >Update Profile</span
+                  >
                 </span>
               </span>
             </div>
@@ -67,6 +69,27 @@ export default {
     };
   },
 
-  methods: {}
+  methods: {
+    async onUpdateProfile() {
+      let data = {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      };
+      try {
+        let response = await this.$axios.$put("/api/auth/user", data);
+
+        if (response.success) {
+          this.name = "";
+          this.email = "";
+          this.password = "";
+
+          await this.$auth.fetchUser();
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
 };
 </script>
