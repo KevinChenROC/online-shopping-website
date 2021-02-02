@@ -35,13 +35,19 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    "@nuxtjs/auth"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     proxy: true,
     baseURL: URL
+  },
+
+  // If not setting this property of proxy, the client would call https://localhost:<client-port>/api/..., instead of the <server port>
+  proxy: {
+    "/api": URL
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -52,5 +58,19 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  //By default, url: /api/auth/login and /api/auth/logout
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            propertyName: "token"
+          },
+          logout: true
+        }
+      }
+    }
+  }
 };
