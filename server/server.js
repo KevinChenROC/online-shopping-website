@@ -31,11 +31,13 @@ const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
 const ownerRoutes = require("./routes/owner");
 const authRouter = require("./routes/auth");
+const reviewRouter = require("./routes/review");
 
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", ownerRoutes);
 app.use("/api", authRouter);
+app.use("/api", reviewRouter);
 
 // start listening
 app.listen(process.env.PORT, (err) => {
