@@ -38,16 +38,17 @@ router.post(
 );
 
 // GET review
-router.get("/reviews/:productID", verifyToken, async (req, res) => {
+router.get("/reviews/:productID", async (req, res) => {
   try {
-    // use populate('user) to get the user info
-    const review = await Review.find({ productID: req.params.productID })
+    const productReviews = await Review.find({
+      productID: req.params.productID,
+    })
       .populate("user")
       .exec();
 
     res.json({
       success: true,
-      review: review,
+      reviews: productReviews,
     });
   } catch (err) {
     res.status(500).json({
