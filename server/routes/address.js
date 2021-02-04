@@ -49,6 +49,23 @@ router.get("/addresses", verifyToken, async (req, res) => {
   }
 });
 
+// GET an address
+router.get("/addresses/:id", verifyToken, async (req, res) => {
+  try {
+    let address = await Address.findOne({ _id: req.params.id });
+
+    res.json({
+      success: true,
+      address: address,
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+});
+
 // GET list of countries
 router.get("/countries", async (req, res) => {
   try {
