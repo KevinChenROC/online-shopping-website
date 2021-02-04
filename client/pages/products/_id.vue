@@ -302,7 +302,10 @@
                 </div>
 
                 <div class="a-section">
-                  <div class="a-button-stack">
+                  <div
+                    class="a-button-stack"
+                    @click="addProductToCart(product)"
+                  >
                     <span
                       class="a-spacing-small a-button-primary a-button-icon"
                     >
@@ -425,8 +428,11 @@
 <script>
 import ReviewSection from "~/components/ReviewSection";
 import StarRating from "vue-star-rating";
+import { mapActions } from "vuex";
+
 export default {
   components: { ReviewSection, StarRating },
+
   async asyncData({ $axios, params }) {
     try {
       let singleProduct = $axios.$get(`/api/products/${params.id}`);
@@ -445,6 +451,10 @@ export default {
     } catch (err) {
       console.log(err);
     }
+  },
+
+  methods: {
+    ...mapActions(["addProductToCart"])
   }
 };
 </script>
