@@ -33,6 +33,7 @@ const ownerRoutes = require("./routes/owner");
 const authRouter = require("./routes/auth");
 const reviewRouter = require("./routes/review");
 const addressRouter = require("./routes/address");
+const paymentRouter = require("./routes/payment");
 
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
@@ -40,6 +41,7 @@ app.use("/api", ownerRoutes);
 app.use("/api", authRouter);
 app.use("/api", reviewRouter);
 app.use("/api", addressRouter);
+app.use("/api", paymentRouter);
 
 // start listening
 app.listen(process.env.PORT, (err) => {
