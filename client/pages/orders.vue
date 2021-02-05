@@ -156,7 +156,7 @@
                       <span
                         class="a-size-mini"
                         style="color: #111; font-weight: 400;"
-                        >Quantity: {{ product.productID.quantity }}</span
+                        >Quantity: {{ product.quantity }}</span
                       >
                     </div>
                     <div class="a-row">
