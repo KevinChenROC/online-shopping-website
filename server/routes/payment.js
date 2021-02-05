@@ -43,7 +43,7 @@ router.post("/payment", verifyToken, (req, res) => {
     })
     .then((customer) => {
       return stripe.customers.createSource(customer.id, {
-        source: "tok_visa",
+        source: "tok_visa", //visa card testing token
       });
     })
     .then((source) => {
