@@ -21,12 +21,14 @@ AWSAccessKeyId=<Amazon s3 bucket key ID>
 AWSSecretKey=<Amazon s3 bucket secret key>
 SECRET=<Type in any random sequence of characters>
 STRIPE_SECRET_KEY=<Your Stripe secret key
-
+ALGOLIA_SECRET=<YOUR ALGOLIA KEY>
+ALGOLIA_APP_ID=<YOUR APP ID>
+ALGOLIA_INDEX=<Name of the Algolia index>
 ```
 
-## Install and run
-
-```
 npm install --save
 node server.js
+
+```
+
 ```
