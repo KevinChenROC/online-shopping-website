@@ -26,9 +26,9 @@ ALGOLIA_APP_ID=<YOUR APP ID>
 ALGOLIA_INDEX=<Name of the Algolia index>
 ```
 
+```
+
 npm install --save
 node server.js
-
-```
 
 ```
