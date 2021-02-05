@@ -20,7 +20,7 @@
                   <!-- Best seller -->
                   <div class="a-spacing-micro">
                     <div class="bestSeller">
-                      <a href="#">Best Seller</a>
+                      Best Seller
                     </div>
                   </div>
 
@@ -28,13 +28,13 @@
                     <div class="row">
                       <!-- Image -->
                       <div class="col-sm-3 text-center">
-                        <a href="#">
+                        <nuxt-link :to="`/products/${product._id}`">
                           <img
                             :src="product.photo"
                             style="width: 150px;"
                             class="img-fluid"
                           />
-                        </a>
+                        </nuxt-link>
                       </div>
 
                       <div class="col-sm-9">
