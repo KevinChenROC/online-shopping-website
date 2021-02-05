@@ -35,6 +35,7 @@ const reviewRouter = require("./routes/review");
 const addressRouter = require("./routes/address");
 const paymentRouter = require("./routes/payment");
 const orderRouter = require("./routes/order");
+const searchRouter = require("./routes/search");
 
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
@@ -44,6 +45,7 @@ app.use("/api", reviewRouter);
 app.use("/api", addressRouter);
 app.use("/api", paymentRouter);
 app.use("/api", orderRouter);
+app.use("/api", searchRouter);
 
 // start listening
 app.listen(process.env.PORT, (err) => {

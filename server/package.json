@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "algoliasearch": "^4.8.4",
     "aws-sdk": "^2.831.0",
     "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
