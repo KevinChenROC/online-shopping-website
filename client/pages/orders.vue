@@ -46,7 +46,7 @@
           <div class="orderContent">
             <div
               class="orderContentBodyAlt"
-              v-for="order in orders"
+              v-for="(order, index) in orders"
               :key="order._id"
             >
               <!-- Order header -->
@@ -60,9 +60,9 @@
                         >ORDER PLACED</span
                       >
                       <br />
-                      <span class="a-size-base a-text-bold a-color-secondary"
-                        >May 16, 2016</span
-                      >
+                      <span class="a-size-base a-text-bold a-color-secondary">{{
+                        new Date(order.orderPlaced).toDateString()
+                      }}</span>
                     </div>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
@@ -70,7 +70,7 @@
                       <span class="a-size-mini a-color-secondary">TOTAL</span>
                       <br />
                       <span class="a-size-base a-text-bold a-color-secondary"
-                        >$904.85</span
+                        >${{ Math.round(order.totalPrice) }}</span
                       >
                     </div>
                   </div>
@@ -93,7 +93,7 @@
                   >
                     <div class="a-row">
                       <span class="a-size-mini a-color-secondary"
-                        >ORDER # 114-7570830-75444212</span
+                        >ORDER # {{ index + 1 }}</span
                       >
                       <br />
                       <a

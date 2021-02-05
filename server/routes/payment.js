@@ -65,6 +65,8 @@ router.post("/payment", verifyToken, (req, res) => {
         });
       });
 
+      order.orderPlaced = new Date();
+      order.totalPrice = req.body.totalPrice;
       order.owner = req.decoded._id;
       order.estimatedDelivery = req.body.estimatedDelivery;
       await order.save();

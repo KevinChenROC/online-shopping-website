@@ -12,6 +12,8 @@ const OrderSchema = new Schema({
     },
   ],
   estimatedDelivery: String,
+  totalPrice: Number,
+  orderPlaced: Date,
 });
 
 OrderSchema.plugin(deepPopulate);
