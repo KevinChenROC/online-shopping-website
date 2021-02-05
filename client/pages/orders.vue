@@ -190,10 +190,8 @@ export default {
     try {
       let response = await $axios.$get("/api/orders");
 
-      console.log(response.products);
-
       return {
-        orders: response.products
+        orders: response.orders
       };
     } catch (err) {
       console.log(err);

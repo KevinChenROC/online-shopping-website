@@ -4,12 +4,12 @@ const verifyToken = require("../middlewares/verify-token");
 
 router.get("/orders", verifyToken, async (req, res) => {
   try {
-    let products = await Order.find({ owner: req.decoded._id })
+    let orders = await Order.find({ owner: req.decoded._id })
       .deepPopulate("owner products.productID.owner")
       .exec();
     res.json({
       success: true,
-      products: products,
+      orders: orders,
     });
   } catch (err) {
     res.status(500).json({
