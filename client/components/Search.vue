@@ -63,5 +63,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      query: ""
+    };
+  },
+
+  methods: {
+    onSearch() {
+      this.$router.push({
+        path: "/search",
+        query: { title: this.query }
+      });
+    }
+  }
+};
 </script>
