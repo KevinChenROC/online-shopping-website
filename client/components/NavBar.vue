@@ -32,7 +32,11 @@
                     id="glow-ingress-line2"
                     v-if="$auth.$state.loggedIn"
                   >
-                    {{ $auth.$state.user.address.city }}
+                    {{
+                      $auth.$state.user.address
+                        ? $auth.$state.user.address.city
+                        : "Taipei"
+                    }}
                   </span>
                   <span class="nav-line-2" v-else id="glow-ingress-line2">
                     Taiwan
